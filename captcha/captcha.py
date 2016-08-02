@@ -2,10 +2,7 @@ import os
 import requests
 
 
-api_key = os.environ.get('2CAPTCHA_API_KEY', '82868d30e4365251d3345d809cbef7cb')
-
-
-def submit_captcha(captcha_path):
+def submit_captcha(api_key, captcha_path):
     """
         submit a captcha image to be broken. Below is the example in the 2captcha API doc
         <form method="post" action="http://2captcha.com/in.php" enctype="multipart/form-data">
@@ -36,7 +33,7 @@ def submit_captcha(captcha_path):
         return Exception('Unexpected Response')
 
 
-def get_solved_captcha(captcha_id):
+def get_solved_captcha(api_key, captcha_id):
     """
         Use GET request of the following configuration:
         http://2captcha.com/res.php?key=YOUR_APIKEY&action=get&id=CAPCHA_ID
@@ -62,10 +59,10 @@ def get_solved_captcha(captcha_id):
 
 if __name__ == '__main__':
     import time
-    captcha_id = submit_captcha('/Users/surya/Downloads/api_spec.png')
+    captcha_id = submit_captcha('82868d30e4365251d3345d809cbef7cb', '/Users/surya/Downloads/api_spec.png')
     print "captcha_id: ", captcha_id
     time.sleep(10)
-    captcha = get_solved_captcha(captcha_id)
+    captcha = get_solved_captcha('82868d30e4365251d3345d809cbef7cb', captcha_id)
     print "captcha: ", captcha
 
 

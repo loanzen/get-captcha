@@ -18,9 +18,11 @@
 
 ```python
 
-   from captcha import submit_captcha
+   from captcha import CaptchaClient
 
-   submit_captcha(`<path of the captcha image>`)
+   c = CaptchaClient(`<your 2captcha api key>`)
+
+   c.submit_captcha(`<path of the captcha image>`)
 
 ```
 
@@ -29,9 +31,7 @@
 
 ```python
 
-   from captcha import get_solved_captcha
-
-   get_solved_captcha(`<captcha id received from submit captcha request>`)
+   c.get_solved_captcha(`<api key>`, `<captcha id received from submit captcha request>`)
 
 ```
 

@@ -1,28 +1,41 @@
-===============================
-zen-captcha
-===============================
+# get-captcha
+
+  Get Captcha text from the image using real intelligence, not artificial intelligence.
+
+  It's a lightweight api client for 2captcha APIs
 
 
+## how to install
 
-.. image:: https://pyup.io/repos/github/suraj-arya/captcha/shield.svg
-     :target: https://pyup.io/repos/github/suraj-arya/captcha/
-     :alt: Updates
-
-
-Get Captcha text from the image using real intelligence not artificial intelligence.
+```bash
+   $ pip install -e git+git@github.com:loanzen/get-captcha.git#egg=captcha
+```
 
 
+## how to use
 
-Features
---------
+### submit captcha
 
-* TODO
+```python
 
-Credits
----------
+   from captcha import CaptchaClient
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+   c = CaptchaClient(`<your 2captcha api key>`)
 
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+   c.submit_captcha(`<path of the captcha image>`)
 
+```
+
+
+### get solved captcha
+
+```python
+
+   c.get_solved_captcha(`<api key>`, `<captcha id received from submit captcha request>`)
+
+```
+
+
+## TODO
+
+- Add the other method of submitting captcha, i.e. with-b64encode image

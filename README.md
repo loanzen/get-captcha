@@ -26,6 +26,22 @@
 
 ```
 
+or
+
+
+### submit captcha base64 encoded
+
+```python
+
+   from captcha import CaptchaClient
+
+   c = CaptchaClient(`<your 2captcha api key>`)
+
+   c.submit_captcha(`<base64 encoded captcha image>`)
+
+```
+
+
 
 ### get solved captcha
 
@@ -34,8 +50,3 @@
    c.get_solved_captcha(`<api key>`, `<captcha id received from submit captcha request>`)
 
 ```
-
-
-## TODO
-
-- Add the other method of submitting captcha, i.e. with-b64encode image

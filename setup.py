@@ -11,7 +11,7 @@ requirements = [
 
 setup(
     name='get-captcha',
-    version='0.1.1',
+    version='0.2.0',
     description="Get Captcha text from the image using real intelligence, not artificial intelligence. Its a client for get-captcha apis",
     long_description='',
     author="Suraj Arya",

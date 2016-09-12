@@ -12,9 +12,9 @@ requirements = [
 ]
 
 setup(
-    name='captcha',
+    name='get-captcha',
     version='0.1.0',
-    description="Get Captcha text from the image using real intelligence, not artificial intelligence.",
+    description="Get Captcha text from the image using real intelligence, not artificial intelligence. Its a client for get-captcha apis",
     long_description=readme,
     author="Suraj Arya",
     author_email='suraj@loanzen.in',
